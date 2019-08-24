@@ -24,7 +24,7 @@
     },
     
    <template>
-      <show-src-code :json="haha" ></show-src-code>
+      <show-src-code :json="data" ></show-src-code>
    </template>
 
    其中，json 为必传值
