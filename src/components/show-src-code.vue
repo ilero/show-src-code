@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import { j2h } from "@/libs/tools"
+  import { j2h } from "../libs/tools"
 
   export default {
     name: "show-src-code",
@@ -15,6 +15,7 @@
     mounted(){},
     methods : {
       innerHtml: function (json) {
+        json = json || {};
         return j2h(json);
       }
     }
