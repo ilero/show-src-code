@@ -1,0 +1,48 @@
+@import "./style";
+// 用于格式化json的样式
+.pt-code-area{
+  width: 100% !important;
+  margin: 1em 0 1em 0 !important;
+  position: relative !important;
+  overflow: auto !important;
+  font-size: 1em !important;
+  background-color: @white;
+  .pt-code{
+    position: relative;
+    counter-reset: increamct 0;
+    &:before{
+      content: ' ';
+      width: 2px;
+      height: 100%;
+      background-color: @blue;
+      position: absolute;
+      left: 28px;
+      z-index: 1000;
+    }
+    .pt-code-content{
+      margin-left: 38px;
+      font-family: Lato,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+      min-width: 100%;
+      display: inline-block;
+      padding-right: 10px;
+      .pt-code-line{
+        display: block;
+        font-family: sans-serif;
+        &:before{
+          counter-increment: increamct;
+          content: counter(increamct);
+          position: absolute;
+          left: 0;
+          color: #999;
+        }
+        &:nth-child(2n+1){
+          background-color: white;
+        }
+        &:nth-child(2n){
+          background-color: #efefef;
+        }
+      }
+    }
+  }
+
+}
